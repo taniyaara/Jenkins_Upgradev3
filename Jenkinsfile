@@ -11,5 +11,8 @@ pipeline {
                         archiveArtifacts artifacts: '**/*.war'
                   }
             }
+            stage ('Deploy to Production') {
+                  steps {
+                        build job: 'Deploy_application'
       }
 }
